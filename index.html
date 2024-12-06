@@ -3,178 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bistro Nova - Modern Italian Dining</title>
+    <title>Zaitoun - Authentic Palestinian Cuisine</title>
     
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- jQuery UI CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
-    
     <!-- JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <nav>
             <div class="logo">
-                <h1>Bistro Nova</h1>
-                <p class="tagline">Modern Italian Cuisine</p>
+                <h1>زيتون</h1>
+                <p class="arabic-name">Zaitoun</p>
+                <p class="tagline">Authentic Palestinian Cuisine</p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#specials">Daily Specials</a></li>
-                    <li><a href="#reservations">Reservations</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Hero Section with Slideshow -->
-        <section id="hero" class="hero-section">
-            <div class="slideshow-container">
-                <!-- Slideshow will be populated via JavaScript -->
-            </div>
+        <section id="home">
+            <h2>Welcome to Zaitoun</h2>
+            <p class="arabic-welcome">أهلا وسهلا</p>
+            <p>Experience authentic Palestinian cuisine</p>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <h2>Welcome to Bistro Nova</h2>
+        <section id="about">
+            <h2>Our Story</h2>
             <div class="about-content">
-                <p>Experience the evolution of Italian cuisine in the heart of the city. At Bistro Nova, we blend traditional Italian recipes with modern culinary techniques to create unforgettable dining experiences.</p>
-                <div class="chef-feature">
-                    <h3>Meet Our Chef</h3>
-                    <p>Chef Maria Rossi brings 20 years of culinary expertise from Florence to your table, crafting dishes that honor her Italian heritage while embracing contemporary flavors.</p>
+                <div class="about-text">
+                    <p>At Zaitoun, we bring the rich culinary heritage of Palestine to your table. Our recipes have been passed down through generations, each dish telling a story of our culture and tradition.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-spices.jpg" alt="Traditional Palestinian Spices" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- Menu Section with jQuery UI Tabs -->
-        <section id="menu" class="menu-section">
+        <section id="menu">
             <h2>Our Menu</h2>
             <div id="menu-tabs">
-                <!-- Tabs will be populated via JavaScript -->
+                <ul>
+                    <li><a href="#appetizers">المقبلات<span>Appetizers</span></a></li>
+                    <li><a href="#main-courses">الأطباق الرئيسية<span>Main Courses</span></a></li>
+                    <li><a href="#desserts">الحلويات<span>Desserts</span></a></li>
+                </ul>
+                <div id="appetizers" class="menu-section">
+                    <div class="loading">Loading appetizers...</div>
+                </div>
+                <div id="main-courses" class="menu-section">
+                    <div class="loading">Loading main courses...</div>
+                </div>
+                <div id="desserts" class="menu-section">
+                    <div class="loading">Loading desserts...</div>
+                </div>
             </div>
         </section>
 
-        <!-- Daily Specials (AJAX Content) -->
-        <section id="specials" class="specials-section">
-            <h2>Today's Specials</h2>
-            <div class="specials-container">
-                <!-- Content will be loaded via AJAX -->
+        <!-- New Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Our Gallery</h2>
+            <div class="gallery-slider">
+                <!-- Images will be loaded via JavaScript -->
             </div>
         </section>
 
-        <!-- Reservations Section -->
-        <section id="reservations" class="reservations-section">
-            <h2>Make a Reservation</h2>
-            <div class="reservation-form">
-                <form id="reserve-table">
-                    <div class="form-group">
-                        <label for="reservation-date">Date:</label>
-                        <input type="text" id="reservation-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reservation-time">Time:</label>
-                        <select id="reservation-time" required>
-                            <option value="">Select a time</option>
-                            <option value="17:00">5:00 PM</option>
-                            <option value="17:30">5:30 PM</option>
-                            <option value="18:00">6:00 PM</option>
-                            <option value="18:30">6:30 PM</option>
-                            <option value="19:00">7:00 PM</option>
-                            <option value="19:30">7:30 PM</option>
-                            <option value="20:00">8:00 PM</option>
-                            <option value="20:30">8:30 PM</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="party-size">Party Size:</label>
-                        <select id="party-size" required>
-                            <option value="">Select party size</option>
-                            <option value="1">1 person</option>
-                            <option value="2">2 people</option>
-                            <option value="3">3 people</option>
-                            <option value="4">4 people</option>
-                            <option value="5">5 people</option>
-                            <option value="6">6 people</option>
-                            <option value="7">7 people</option>
-                            <option value="8">8 people</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="customer-name">Name:</label>
-                        <input type="text" id="customer-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="customer-email">Email:</label>
-                        <input type="email" id="customer-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="customer-phone">Phone:</label>
-                        <input type="tel" id="customer-phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="special-requests">Special Requests:</label>
-                        <textarea id="special-requests"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Reserve Table</button>
-                </form>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <h3>Find Us</h3>
+                <p><span class="icon">📞</span> (555) 123-4567</p>
+                <p><span class="icon">📧</span> info@zaitoun.com</p>
+                <div class="hours">
+                    <h4>Hours</h4>
+                    <p>Monday - Thursday: 11am - 10pm</p>
+                    <p>Friday - Saturday: 11am - 11pm</p>
+                    <p>Sunday: 12pm - 9pm</p>
+                </div>
             </div>
-        </section>
-
-        <!-- Customer Preferences Section (Web Storage) -->
-        <section id="preferences" class="preferences-section">
-            <h2>Your Dining Preferences</h2>
-            <div class="preferences-container">
-                <form id="preferences-form">
-                    <div class="form-group">
-                        <label for="dietary-restrictions">Dietary Restrictions:</label>
-                        <select id="dietary-restrictions" multiple>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="vegan">Vegan</option>
-                            <option value="gluten-free">Gluten-Free</option>
-                            <option value="dairy-free">Dairy-Free</option>
-                            <option value="nut-free">Nut-Free</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="spice-preference">Spice Preference:</label>
-                        <div id="spice-slider"></div>
-                    </div>
-                    <button type="submit" class="btn-secondary">Save Preferences</button>
-                </form>
-            </div>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>123 Culinary Avenue</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@bistronova.com</p>
+            <div class="footer-section">
+                <h3>Zaitoun</h3>
+                <p>Bringing Palestine's flavors to your table</p>
             </div>
-            <div class="hours">
-                <h3>Hours</h3>
-                <p>Tuesday - Sunday: 5:00 PM - 10:00 PM</p>
-                <p>Closed Mondays</p>
-            </div>
-            <div class="social-links">
+            <div class="footer-section">
                 <h3>Follow Us</h3>
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2024 Bistro Nova. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Zaitoun. All rights reserved.</p>
         </div>
     </footer>
 </body>

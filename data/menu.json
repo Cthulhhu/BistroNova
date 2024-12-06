@@ -1,0 +1,32 @@
+{
+    "appetizers": [
+        {
+            "name": "Hummus",
+            "arabicName": "حمص",
+            "description": "Creamy chickpea dip with tahini and olive oil",
+            "price": 8.99
+        },
+        {
+            "name": "Falafel",
+            "arabicName": "فلافل",
+            "description": "Crispy chickpea fritters with tahini sauce",
+            "price": 7.99
+        }
+    ],
+    "mainCourses": [
+        {
+            "name": "Musakhan",
+            "arabicName": "مسخن",
+            "description": "Roasted chicken with caramelized onions and sumac",
+            "price": 24.99
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Knafeh",
+            "arabicName": "كنافة",
+            "description": "Sweet cheese pastry with crispy shredded phyllo",
+            "price": 9.99
+        }
+    ]
+}
